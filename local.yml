@@ -3,10 +3,11 @@
   connection: local
   become: true
 
+  pre-tasks:
+    - name: update repositories
+      apt:
+        update-cache: yes
+      changed_when: False
+
   tasks:
-    - name: install packages
-      package:
-        name:
-          - htop
-          - tmux
-          - neovim
+    - include: tasks/packages.yml
