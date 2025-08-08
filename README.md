@@ -6,7 +6,14 @@ This is a work in progress. The intention is to be able to configure my MacOS an
 
 ## How To Use
 
-1. Ensure `ansible` is installed.
+### Requirements
+
+- Install `git`
+- Install `ansible`
+- Give user `sudo` privileges (or use `-K` in `ansible-pull` command to manually enter sudo password)
+
+### 1. Ensure `ansible` is installed
+
 On MacOS:
 
 ```
@@ -19,7 +26,7 @@ On Linux:
 pip install ansible
 ```
 
-2. To run:
+### 2. To run
 
 ```
 sudo ansible-pull -U https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
